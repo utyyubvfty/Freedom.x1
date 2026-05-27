@@ -1,0 +1,143 @@
+05.27 14:03
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApniSaite - The Global Super App</title>
+    
+    <!-- गूगल ट्रांसलेट का असली ग्लोबल आर्किटेक्चर -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'hi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//://google.com"></script>
+
+    <style>
+        :root {
+            --primary: #1e90ff;
+            --success: #2ed573;
+            --danger: #ff4757;
+            --dark: #2f3542;
+            --light: #f1f2f6;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: #f5f6fa; color: var(--dark); display: flex; flex-direction: column; min-height: 100vh; padding-bottom: 70px; }
+        
+        /* प्रोफेशनल इंटरनेशनल हेडर */
+        .global-header { background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; }
+        .ads-monetization-bar { display: flex; background: #eef2f7; border-bottom: 1px solid #dcdde1; }
+        .peg-bahar-btn { width: 25%; padding: 12px; background: var(--danger); color: white; text-align: center; font-weight: bold; cursor: pointer; border: none; transition: 0.2s; }
+        .peg-bahar-btn:hover { background: #cc3747; }
+        .global-ad-slot { width: 37.5%; padding: 12px; text-align: center; color: var(--primary); font-size: 13px; font-weight: bold; cursor: pointer; text-decoration: underline; }
+        
+        .navbar-main { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; gap: 15px; }
+        .control-btn { background: var(--primary); color: white; padding: 10px 18px; border-radius: 25px; cursor: pointer; border: none; font-weight: bold; font-size: 14px; box-shadow: 0 2px 5px rgba(30,144,255,0.3); }
+        .brand-logo { font-size: 24px; font-weight: 800; background: linear-gradient(45deg, #1e90ff, #70a1ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* वर्ल्ड क्लास सर्च इंजन */
+        .search-engine-box { flex: 1; position: relative; }
+        .search-engine-box input { width: 100%; padding: 10px 20px; border: 2px solid #e1e8ed; border-radius: 30px; outline: none; font-size: 14px; transition: 0.3s; }
+        .search-engine-box input:focus { border-color: var(--primary); box-shadow: 0 0 8px rgba(30,144,255,0.2); }
+
+        /* स्लाइडिंग साइडबार */
+        .global-sidebar { position: fixed; top: 0; left: -320px; width: 300px; height: 100%; background: white; box-shadow: 5px 0 25px rgba(0,0,0,0.15); transition: 0.4s cubic-bezier(0.1, 0.9, 0.2, 1); z-index: 2000; padding: 25px; }
+        .global-sidebar.active { left: 0; }
+        .sidebar-brand { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 2px solid var(--light); padding-bottom: 15px; }
+        .menu-navigation { list-style: none; }
+        .menu-navigation li { padding: 14px 12px; cursor: pointer; border-radius: 8px; font-weight: 600; display: flex; align-items: center; gap: 10px; transition: 0.2s; }
+        .menu-navigation li:hover { background: var(--light); color: var(--primary); }
+
+        /* डैशबोर्ड लेआउट */
+        .dashboard-grid { max-width: 800px; margin: 20px auto; width: 100%; padding: 0 15px; display: flex; flex-direction: column; gap: 20px; }
+        .feature-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.03); }
+        .card-header-title { font-size: 18px; font-weight: 700; margin-bottom: 15px; color: var(--dark); display: flex; justify-content: space-between; align-items: center; }
+        
+        /* लाइव न्यूज और कहानियां */
+        .news-feed-item, .story-feed-item { border-bottom: 1px solid var(--light); padding: 12px 0; font-size: 15px; line-height: 1.5; cursor: pointer; transition: 0.2s; }
+        .news-feed-item:hover, .story-feed-item:hover { color: var(--primary); transform: translateX(5px); }
+        .news-feed-item:last-child, .story-feed-item:last-child { border: none; }
+
+        /* रियल-टाइम ग्लोबल चैट */
+        .global-chat-panel { display: flex; flex-direction: column; height: 260px; }
+        .chat-display-area { flex: 1; border: 1px solid #e1e8ed; padding: 15px; overflow-y: auto; background: #f7f9fa; border-radius: 8px; margin-bottom: 10px; }
+        .message-bubble { margin-bottom: 10px; padding: 8px 12px; border-radius: 12px; max-width: 80%; font-size: 14px; line-height: 1.4; }
+        .msg-incoming { background: white; border: 1px solid #e1e8ed; align-self: flex-start; }
+        .msg-outgoing { background: var(--primary); color: white; align-self: flex-end; margin-left: auto; }
+        .chat-input-system { display: flex; gap: 8px; }
+        .chat-input-system input { flex: 1; padding: 12px; border: 1px solid #e1e8ed; border-radius: 8px; outline: none; }
+        .chat-input-system button { background: var(--success); color: white; border: none; padding: 0 20px; font-weight: bold; border-radius: 8px; cursor: pointer; }
+
+        /* इंटेलिजेंट वॉयस AI */
+        .voice-ai-box { display: flex; flex-direction: column; gap: 12px; text-align: center; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px; border-radius: 8px; }
+        .ai-voice-btn { background: linear-gradient(45deg, #00ea93, #05c46b); color: white; border: none; padding: 14px; font-weight: bold; border-radius: 30px; cursor: pointer; font-size: 16px; box-shadow: 0 4px 15px rgba(5,196,107,0.3); }
+
+        /* नीचे का व्यावसायिक टूलबार */
+        .bottom-navigation-bar { position: fixed; bottom: 0; width: 100%; display: flex; background: white; box-shadow: 0 -4px 12px rgba(0,0,0,0.05); border-top: 1px solid #e1e8ed; z-index: 999; }
+        .nav-action-btn { width: 50%; padding: 18px; text-align: center; font-weight: bold; cursor: pointer; font-size: 16px; border: none; transition: 0.2s; }
+        .btn-launch-game { background: var(--success); color: white; }
+        .btn-launch-game:hover { background: #26bc62; }
+        .btn-monetize-add { background: #ffa502; color: white; }
+        .btn-monetize-add:hover { background: #e19202; }
+
+        /* फुल स्क्रीन इमर्सिव गेमिंग आर्किटेक्चर */
+        #immersiveGameTheater { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: #000; z-index: 99999; }
+        .exit-theater-btn { position: absolute; top: 15px; right: 15px; background: var(--danger); color: white; border: none; padding: 12px 24px; font-weight: bold; border-radius: 25px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .game-frame-loader { width: 100%; height: 100%; border: none; }
+    </style>
+</head>
+<body>
+
+    <!-- टॉप ग्लोबल हेडर -->
+    <div class="global-header" id="topBar">
+        <div class="ads-monetization-bar">
+            <button class="peg-bahar-btn" onclick="location.reload()">Peg Bahar</button>
+            <div class="global-ad-slot" onclick="triggerAdEngine()"> International Super Offer</div>
+            <div class="global-ad-slot" onclick="triggerAdEngine()"> Global Earnings Active</div>
+        </div>
+        <div class="navbar-main">
+            <button class="control-btn" onclick="toggleSidebarEngine()">⚙️ MENU</button>
+            <div class="search-engine-box">
+                <input type="text" id="globalSearchInput" onkeyup="liveSearchEngine()" placeholder="वैश्विक कहानियाँ या लाइव समाचार खोजें...">
+            </div>
+            <div class="brand-logo">ApniSaite</div>
+        </div>
+    </div>
+
+    <!-- ग्लोबल साइडबार -->
+    <div class="global-sidebar" id="sidebarMenu">
+        <div class="sidebar-brand">
+            <h3 style="font-weight: 800;">⚙️ SETTINGS</h3>
+            <span style="cursor:pointer; font-size:24px; color: var(--danger);" onclick="toggleSidebarEngine()">✖</span>
+        </div>
+        <!-- गूगल का असली ट्रांसलेटर विजेट यहाँ रेंडर होगा -->
+        <div id="google_translate_element" style="margin-bottom: 20px; padding: 10px; background: var(--light); border-radius: 5px;"></div>
+        <ul class="menu-navigation">
+            <li onclick="triggerAdEngine()"> Global History</li>
+            <li onclick="toggleSidebarEngine()"> Enterprise Login</li>
+            <li onclick="toggleSidebarEngine()"> Session Logout</li>
+        </ul>
+    </div>
+
+    <!-- मुख्य डैशबोर्ड -->
+    <div class="dashboard-grid" id="mainContent">
+        
+        <!-- लाइव न्यूज़ फीड (Microsoft/RSS Feed Architecture) -->
+        <div class="feature-card">
+            <div class="card-header-title"> LIVE INTERNATIONAL NEWS <span style="font-size:12px; color:var(--success); background: rgba(46,213,115,0.1); padding: 3px 8px; border-radius: 10px;">WORLDWIDE 🟢</span></div>
+            <div id="newsFeedContainer">
+                <div class="news-feed-item" onclick="processContentClick('Global Tech Breakthrough')"> <b>Global Tech:</b> विश्व स्तर पर नई एआई प्रणालियों ने रचा इतिहास, बदल जाएगी दुनिया।</div>
+                <div class="news-feed-item" onclick="processContentClick('International Market Update')"> <b>Markets:</b> वैश्विक बाज़ारों में भारी उछाल, डिजिटल एसेट्स ने पकड़ी रफ़्तार।</div>
+                <div class="news-feed-item" onclick="processContentClick('Global Weather Report')"> <b>Environment:</b> मौसम वैज्ञानिकों ने जारी की अंतरराष्ट्रीय सैटेलाइट रिपोर्ट।</div>
+            </div>
+        </div>
+
+        <!-- प्रीमियम स्टोरीज -->
+        <div class="feature-card">
+            <div class="card-header-title"> PREMIUM GLOBAL STORIES</div>
+            <div id="storyFeedContainer">
+
